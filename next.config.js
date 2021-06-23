@@ -1,5 +1,5 @@
 module.exports = {
 	images: {
-		domains: [ 'https://assets.coingecko.com' ]
+		domains: [ 'assets.coingecko.com' ]
 	}
 };

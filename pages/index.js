@@ -20,11 +20,6 @@ export async function getStaticProps() {
 export default function Home({ coins }) {
 	const [ search, setSearch ] = useState('');
 
-	//console.log(coins);
-	const result = coins.filter((coin) => {
-		console.log(coin.name);
-	});
-
 	const searchHandler = (e) => {
 		setSearch(e.target.value);
 	};
@@ -33,32 +28,60 @@ export default function Home({ coins }) {
 	return (
 		<div className={styles.container}>
 			<main className={styles.main}>
-				<h1 className={styles.title}>Next cryptocurrency tracker</h1>
+				<div className="centered-text">
+					<h1 className={styles.title}>Next Js cryptocurrency tracker</h1>
 
-				<h2 className={styles.description}>Cryptocurrency Prices by Market Cap</h2>
-				<div>
-					<form>
-						<input type="text" onChange={searchHandler} placeholder="search here" />
-					</form>
-				</div>
-				<div>
-					<div className="coins-title">
-						<h3>Coin</h3>
-						<h3>Price</h3>
-						<h3>1Hr</h3>
-						<h3>24h Volume</h3>
-						<h3>Mkt Cap</h3>
+					<h2 className={styles.description}>Cryptocurrency Prices by Market Cap</h2>
+					<div className="form-container">
+						<form>
+							<input
+								className="search-input"
+								type="text"
+								onChange={searchHandler}
+								placeholder="search here"
+							/>
+						</form>
 					</div>
-					{filterCoins.map((coin) => <Coins key={coin.id} coin={coin} />)}
 				</div>
+				<div>{filterCoins.map((coin) => <Coins key={coin.id} coin={coin} />)}</div>
 			</main>
 			<style jsx>{`
+				h1 {
+					margin-bottom: 1rem;
+				}
+				.centered-text {
+					text-align: center;
+					margin: 2rem auto;
+				}
+				.form-container {
+					margin: 4rem auto;
+				}
 				.coins-title {
+					display: flex;
+				}
+				.margin-left {
+					margin-left: 25rem;
 					display: grid;
-					justify-content: center;
-					align-content: center;
+					justify-content: start;
 					grid-auto-flow: column;
 					grid-column-gap: 12rem;
+				}
+				.search-input {
+					height: 5rem;
+					width: 30rem;
+					font-size: 2rem;
+					padding: 2rem 3rem;
+					background-image: linear-gradient(-225deg, #5f2c82 20%, #7918f2 48%, #49a09d 74%);
+					transition: 0.5s;
+					color: #fff;
+					border: none;
+				}
+				.search-input:focus {
+					transition: 0.5s;
+					background-image: linear-gradient(-225deg, #49a09d 20%, #7918f2 58%, #5f2c82 100%);
+				}
+				.search-input::placeholder {
+					color: #fff;
 				}
 			`}</style>
 		</div>
