@@ -4,10 +4,10 @@ export default function Coins({ coin }) {
 		<>
 			
 				<div className='coin-container'>
-					<h4>{coin.market_cap_rank}</h4>
-					<h4>{coin.name}</h4>
+					<h3>{coin.market_cap_rank}</h3>
+					<h3>{coin.name}</h3>
 					<p>{coin.symbol}</p>
-					<Image src={coin.image} height={40} width={30} />
+					<Image src={coin.image} height={32} width={32}alt={coin.name}/>
 					<p>${coin.current_price.toLocaleString()}</p>
 					{coin.price_change_percentage_24h < 0 ? (
 						<p className='red'>{coin.price_change_percentage_24h.toFixed(1)}%</p>
@@ -21,8 +21,9 @@ export default function Coins({ coin }) {
 			
 			<style jsx>{`
 				.coin-container {
+					font-size: 1.8rem;
 					display: grid;
-					grid-template-columns: 2rem 7rem 5rem 5rem 10rem 10rem 13rem 14rem;
+					grid-template-columns: 2rem 14rem 5rem 5rem 10rem 10rem 13rem 14rem;
 					grid-column-gap: 4rem;
 					align-items: center;
 					justify-items: start;
