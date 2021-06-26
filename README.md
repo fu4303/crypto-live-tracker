@@ -1,7 +1,50 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# next-crypto-tracker
+## Live Code - [Preview](https://next-crypto-tracker.vercel.app)
+<!-- ctrl+shift+v : preview -->
+![Project Image](assets/next-crypto-tracker.gif)
 
-## Getting Started
+---
 
+### Table of Contents
+You're sections headers will be used to reference location of destination.
+
+- [Description](#description)
+- [How To Use](#how-to-use)
+- [Author Info](#author-info)
+
+---
+
+## Live Code - [Preview](https://next-crypto-tracker.vercel.app)
+
+## Description
+- I wanted to make my second next Js project with an API that will help me use Incremental static regeneration to get live update every 2-8 seconds. 
+- Using the filter method and state to ensure that a user can search for a specific coin for a quick access. This is better than just scrolling down manually just to view updates for one coin. 
+- Next Js made it easier to get API data with getStaticProps async function to return an object of data and destructure it to be a prop for the main component. This help to render data to the UI which the user can see more quickly and a smooth process. 
+- The thing about Next Js it really help to improve peformance also for your website. 
+![Lighthouse result for next project](https://i.ibb.co/52Tq04t/lighthouse.png)
+
+- With the Head component and also the Image component, it improves SEO and performance. If you haven't used Next Js, I hope this will be convencing enough. 
+### Future add ons
+- Add a blog about blockchain and how anyone can get started in this area without any previous knowledge about it.
+
+#### Technologies
+
+- React
+- Next Js
+- Vercel
+
+
+[Back To The Top](Contentful-food-blog)
+
+---
+#### Installation
+```bash
+    Use a command Prompt and type : npm install
+    # or
+    npm i
+```
+
+## How To Use
 First, run the development server:
 
 ```bash
@@ -12,23 +55,13 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+ 
+## Author Info
+#### [Jane Muchiri ](https://github.com/muchirijane)
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- Twitter - [@TracyCss](https://twitter.com/TracyCss)
+- Website - [portfolio](https://jane.vercel.app/)
 
-## Learn More
+[Back To The Top](next-crypto-tracker)
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
